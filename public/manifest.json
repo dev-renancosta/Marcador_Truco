@@ -2,7 +2,8 @@
   "name": "Marcador de Truco",
   "short_name": "Truco",
   "description": "Marcador de Truco profissional e rápido",
-  "start_url": "/",
+  "start_url": "/Marcador_Truco/",
+  "scope": "/Marcador_Truco/",
   "display": "standalone",
   "orientation": "portrait",
   "background_color": "#0b0b0b",
@@ -10,31 +11,31 @@
   "categories": ["games", "utilities"],
   "icons": [
     {
-      "src": "/icon.svg",
+      "src": "/Marcador_Truco/icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
     },
     {
-      "src": "/icon-192.png",
+      "src": "/Marcador_Truco/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icon-512.png",
+      "src": "/Marcador_Truco/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     },
     {
-      "src": "/icon-maskable-192.png",
+      "src": "/Marcador_Truco/icon-maskable-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/icon-maskable-512.png",
+      "src": "/Marcador_Truco/icon-maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"

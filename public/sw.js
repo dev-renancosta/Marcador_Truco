@@ -1,9 +1,10 @@
-const CACHE_NAME = 'truco-cache-v3';
+const BASE = '/Marcador_Truco/';
+const CACHE_NAME = 'truco-cache-v4';
 const PRECACHE_URLS = [
-  '/',
-  '/index.html',
-  '/icon.svg',
-  '/manifest.json',
+  BASE,
+  BASE + 'index.html',
+  BASE + 'icon.svg',
+  BASE + 'manifest.json',
 ];
 
 // Pre-cache on install
@@ -39,7 +40,6 @@ self.addEventListener('fetch', event => {
     url.pathname.startsWith('/@') ||
     url.pathname.startsWith('/node_modules') ||
     url.pathname.includes('hot-update') ||
-    url.pathname === '/src/main.tsx' ||
     url.pathname.startsWith('/src/')
   ) {
     return;
@@ -59,9 +59,8 @@ self.addEventListener('fetch', event => {
       .catch(() => {
         return caches.match(event.request).then(cachedResponse => {
           if (cachedResponse) return cachedResponse;
-          // For navigation requests, return cached index.html
           if (event.request.mode === 'navigate') {
-            return caches.match('/index.html');
+            return caches.match(BASE + 'index.html');
           }
           return new Response('', { status: 408 });
         });
